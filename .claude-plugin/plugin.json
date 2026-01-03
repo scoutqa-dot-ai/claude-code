@@ -1,0 +1,8 @@
+{
+  "name": "scoutqa-plugin",
+  "description": "Create targeted test executions with natural language prompts using ScoutQA CLI",
+  "version": "0.0.1",
+  "author": {
+    "name": "team@scoutqa.ai"
+  }
+}

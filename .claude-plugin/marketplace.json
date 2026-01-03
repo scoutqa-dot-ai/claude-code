@@ -1,0 +1,17 @@
+{
+  "name": "scoutqa-marketplace",
+  "metadata": {
+    "description": "ScoutQA marketplace for Claude Code"
+  },
+  "owner": {
+    "name": "team@scoutqa.ai"
+  },
+  "plugins": [
+    {
+      "name": "scoutqa-plugin",
+      "source": "./",
+      "description": "Create targeted test executions with natural language prompts using ScoutQA CLI",
+      "version": "0.0.1"
+    }
+  ]
+}
