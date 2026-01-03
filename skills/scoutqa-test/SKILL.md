@@ -1,11 +1,11 @@
 ---
-name: test
-description: Execute AI-powered exploratory testing on web applications using natural language. Use when asked to test websites, verify user flows (login, checkout, forms), find accessibility issues, or run automated QA. Triggers on requests like "test this website", "check for accessibility issues", "verify the login flow works", or "find bugs on this page".
+name: scoutqa-test
+description: This skill should be used when the user asks to "test this website", "run exploratory testing", "check for accessibility issues", "verify the login flow works", "find bugs on this page", or requests automated QA testing. Triggers on web application testing scenarios including smoke tests, accessibility audits, e-commerce flows, and user flow validation using ScoutQA CLI.
 ---
 
 # ScoutQA Testing Skill
 
-Use the `scoutqa` CLI to perform AI-powered exploratory testing on web applications.
+Perform AI-powered exploratory testing on web applications using the `scoutqa` CLI.
 
 ## Running Tests
 
@@ -52,57 +52,11 @@ Avoid vague prompts like "test the site" — be specific about what to test and 
 
 ## Presenting Results
 
-After execution completes, extract and present to the user:
+After execution completes, extract and present:
 
 - **Execution ID** (e.g., `ex_abc123`) for reference
 - **Browser URL** (e.g., `https://scoutqa.ai/t/ex_abc123`) for full interactive report with screenshots
 - **Issues found** with severity and category (accessibility, usability, functional)
-
-## Common Test Patterns
-
-### Smoke Test
-
-```bash
-scoutqa --url "$URL" --prompt "
-Smoke test: verify homepage loads, navigation works, login/logout functions,
-critical user flows complete, no console errors
-"
-```
-
-### Accessibility Audit
-
-```bash
-scoutqa --url "$URL" --prompt "
-Accessibility audit: check WCAG 2.1 AA compliance, keyboard navigation,
-screen reader compatibility, color contrast, form labels and ARIA attributes
-"
-```
-
-### E-commerce Flow
-
-```bash
-scoutqa --url "$URL" --prompt "
-Test e-commerce flow:
-1. Search and filter products
-2. View product detail page with variants and pricing
-3. Add to cart and verify persistence
-4. Proceed through checkout steps
-5. Verify cart quantity updates and pricing calculations
-"
-```
-
-### SaaS Application
-
-```bash
-scoutqa --url "$URL" --prompt "
-Test SaaS application:
-1. Login authentication flow
-2. Dashboard widgets load with real data
-3. CRUD operations on core entities
-4. Settings and permissions enforcement
-5. Search/filter across datasets
-"
-```
 
 ## Following Up on Stuck Executions
 
@@ -126,3 +80,10 @@ Focus on the checkout flow next, skip the wishlist feature
 | ---------------------------- | ------------------------------------------- |
 | `command not found: scoutqa` | Install CLI: `npm i -g @scoutqa/cli@latest` |
 | Auth expired / unauthorized  | Run `scoutqa auth login`                    |
+
+## Additional Resources
+
+### Reference Files
+
+For ready-to-use testing patterns, consult:
+- **`references/patterns.md`** - Common test patterns (smoke tests, accessibility audits, e-commerce flows, SaaS applications, authentication, form validation, mobile responsiveness)

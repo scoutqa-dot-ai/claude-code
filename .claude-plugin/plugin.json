@@ -1,8 +1,12 @@
 {
   "name": "scoutqa-plugin",
-  "description": "Create targeted test executions with natural language prompts using ScoutQA CLI",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "AI-powered exploratory testing for web applications using ScoutQA CLI",
   "author": {
-    "name": "team@scoutqa.ai"
-  }
+    "name": "ScoutQA Team",
+    "email": "team@scoutqa.ai",
+    "url": "https://scoutqa.ai"
+  },
+  "license": "MIT",
+  "keywords": ["testing", "qa", "accessibility", "e2e", "exploratory-testing"]
 }
